@@ -1,22 +1,29 @@
+import java.util.Scanner;
+
+
 public class DoZero {
     static void main() {
         System.out.println("===============");
         System.out.println("Seja bem vindo");
-        System.out.println("iremos te mostrar como calcular as parcelas");
+        System.out.println("Me diga o Valor do Produto");
 
-        int CalculoNovo = 12000;
+        Scanner scanner = new Scanner(System.in);
+        double CalculoNovo = scanner.nextDouble();
 
         System.out.println("o Valor é de "
         + CalculoNovo + " R$");
 
-        int parcelasCartao = 15;
+        System.out.println("Digite a quantidade de vezes que voce deseja parcelar");
 
-        System.out.println("O numero de Parcelas é de "
+        double parcelasCartao = scanner.nextDouble();
+
+
+        System.out.println("O produto vai ser dividido em "
         + parcelasCartao + " vezes");
 
-        int valorParcela = CalculoNovo / parcelasCartao;
+        double valorParcela = CalculoNovo / parcelasCartao;
 
-        System.out.println("O valor de cada parcela é de "
+        System.out.println("O valor de cada parcela ficará "
         + "R$" + valorParcela);
 
         System.out.println("Esse é o valor das parcelas, deseja realizar a compra?");
