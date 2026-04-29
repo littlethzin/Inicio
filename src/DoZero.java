@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 
 public class DoZero {
-    static void main() {
+    static void main(String[] args) {
         System.out.println("===============");
         System.out.println("Seja bem vindo");
         System.out.println("Me diga o Valor do Produto");
@@ -26,7 +26,11 @@ public class DoZero {
         System.out.println("O valor de cada parcela ficará "
         + "R$" + valorParcela);
 
+        scanner.close();
+
         System.out.println("Esse é o valor das parcelas, deseja realizar a compra?");
         System.out.println("Obrigado");
+
+
     }
 }
