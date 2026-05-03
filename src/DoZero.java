@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class DoZero {
     static void main(String[] args) {
         //lembrar de ativar a String e args ja que eu uso da abreviação psvm
@@ -62,25 +61,45 @@ public class DoZero {
             System.out.println("Esse é o valor das parcelas, deseja realizar a compra?");
 
             String word = scanner.nextLine();
-            System.out.println("Voce deseja fazer a compra?");
+
 
             boolean palavra = word.equalsIgnoreCase ("Sim");
 
 
             if (palavra) {
-                System.out.println("Insira o seu metodo para pagemtento "
-                        + (" Agradecemos por comprar conosco."));
+                System.out.println("Insira o seu metodo para pagemtento ");
+                compraRealizada compra = new compraRealizada();
+                System.out.println(" Agradecemos por comprar conosco.");
+
 
             } else {
-                System.out.println("Obrigado por entrar em contato conosco, desejamos que voce consgiga comprar o que voce deseja");
+
+                System.out.println("Obrigado por entrar em contato conosco, desejamos que voce consgiga comprar o que voce deseja"
+                );
+                compraNRealizada nCompra = new compraNRealizada();
+
             }
 
             scanner.close();
 
 
-            System.out.println("Obrigado");
+
 
 
         }
     }
 
+
+    class compraRealizada {
+        public compraRealizada() {
+            System.out.println("  compra realizada  ");
+        }
+    }
+
+class compraNRealizada {
+    public void CompraNRealizada() {
+        System.out.println("  Compra nao realizada" +
+                "Agradecemos pelo contato conosco +" +
+                "Sempre que precisar, estaremos aqui");
+    }
+}
