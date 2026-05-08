@@ -11,7 +11,6 @@ public class DoZero {
         double calculoNovo = scanner.nextDouble();
 
         //denominei a variavel double (numeros decimais)
-
         System.out.println("o Valor é de "
                 + calculoNovo + " R$");
 
@@ -20,17 +19,20 @@ public class DoZero {
         //determinei valores para descontos fixos
 
 
-        if (calculoNovo > 10000) {
+        if (calculoNovo >= 10000) {
             System.out.println("Voce acabou de ganhar um desconto, parabens. " +
-                    " O seu desconto foi de " + DescontosP[1]);
-            double valorCDesconto = calculoNovo - DescontosP[1];
+                    " O seu desconto foi de " + DescontosP[4]);
+            double valorCDesconto = calculoNovo - DescontosP[4];
+            System.out.println("O valor do produto com Desconto é de " + valorCDesconto);
 
         }    //aprendi a melhorar a logica do meu codigo apenas observando o meu codigo
         //consegui deixar bem mais pratico
 
-        else if (calculoNovo > 4500) {
+        else if (calculoNovo >= 4500) {
             System.out.println("Voce acabou de ganhar um desconto de " + DescontosP[3]);
-            double valorCDesconto1 = calculoNovo - DescontosP[3];
+            double valorCDesconto = calculoNovo - DescontosP[3];
+            System.out.println("O valor do produto com Desconto é de " + valorCDesconto);
+
         } else {
             System.out.println("Não há desconto disponivel para este valor");
             double valorCDesconto = calculoNovo - DescontosP[0];
@@ -38,11 +40,10 @@ public class DoZero {
             //estou tentando entender como posso conseguir rodar o codigo sem ter que declarar a variavel valorCDesconto
             //mas o progresso esta sendo feito
 
-        double valorCDesconto = calculoNovo - DescontosP[1];
+        double valorCDesconto = calculoNovo - DescontosP[0];
             //ainda nao sei como declarar descontos de formas aleatorias, imagino que tenha que declarar de forma
             //especifica em cada valor com if, else e else if.
 
-            System.out.println("O valor do produto com Desconto é de " + valorCDesconto);
             System.out.println("Digite a quantidade de vezes que voce deseja parcelar");
 
             double parcelasCartao = scanner.nextDouble();
@@ -62,8 +63,8 @@ public class DoZero {
 
             String word = scanner.nextLine();
 
-
             boolean palavra = word.equalsIgnoreCase ("Sim");
+            // para ignorar qualquer palavra que nao seja o sim
 
 
             if (palavra) {
@@ -76,12 +77,14 @@ public class DoZero {
 
                 System.out.println("Obrigado por entrar em contato conosco, desejamos que voce consgiga comprar o que voce deseja"
                 );
-                compraNRealizada nCompra = new compraNRealizada();
+                compraRealizadaN nCompra = new compraRealizadaN();
+                System.out.println("tenha um bom dia");
+
 
             }
 
             scanner.close();
-
+            //uma vez que o scanner esta fechado, eu nao consigo puxar ele em outro lugar
 
 
 
@@ -92,14 +95,12 @@ public class DoZero {
 
     class compraRealizada {
         public compraRealizada() {
-            System.out.println("  compra realizada  ");
+            System.out.println("compra realizada");
         }
     }
 
-class compraNRealizada {
-    public void CompraNRealizada() {
-        System.out.println("  Compra nao realizada" +
-                "Agradecemos pelo contato conosco +" +
-                "Sempre que precisar, estaremos aqui");
+class compraRealizadaN {
+    public compraRealizadaN() {
+        System.out.println("compra nao realizada");
     }
 }
