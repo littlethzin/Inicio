@@ -1,13 +1,64 @@
 import java.util.Scanner;
+import java.util.*;
 
 public class DoZero {
-    static void main(String[] args) {
+    static void main (String[] args) {
+        String op1 = "1 - Deseja fazer login?";
+        String op2 = "2 - Deseja consultar os preços dos produtos";
+        String op3 = "3 - Deseja sair do nosso site?";
+        System.out.println(op1);
+        System.out.println(op2);
+        System.out.println(op3);
+        Scanner scanner = new Scanner(System.in);
+        String opEscolhida = scanner.nextLine();
+            String loginCorreto = "thiagofeliciano";
+            String senhaCorreta = "ThiagoJorge99";
+        if (opEscolhida.equalsIgnoreCase("1")) {
+
+            System.out.println("Voce escolheu a opcao Login");
+            System.out.println("Digite seu email ou nome de usuario");
+            String loginUser = scanner.nextLine();
+
+            System.out.println("Digite sua senha");
+
+            String senhaUser = scanner.nextLine();
+            boolean loginCerto = loginUser.equals(loginCorreto);
+            boolean senhaCerta = senhaCorreta.equals(senhaUser);
+            if (loginCerto) {
+                System.out.println("Seu login esta correto" );
+                //aqui lembrei que booleanos sao sempre utilizados para valores true e usei
+            }
+            else {
+                System.out.println("Nome de usuario ou senha incorreto");
+                System.out.println("tente novamente");
+                System.exit(0);
+            }
+
+        } else if (opEscolhida.equalsIgnoreCase("2")) {
+            System.out.println("Voce escolheu a opçao 2");
+            loginin loginon = new loginin();
+            loginon.loginlouco();
+
+            //ainda analisando e pensando em como posso melhorar essa parte
+
+
+        } else {
+            System.out.println("Voce digitou uma opção invalida.");
+            System.out.println("Pedimos que voce dê um refresh no site");
+            System.out.println("Agradecemos a compreensão");
+            System.exit(0);
+
+        }
+        //ainda analisando como eu posso fazer uma classe inteira somente para o usuario que nao é admin
+        //sem que seja dentro de um else inteiro
+
+
         //lembrar de ativar a String e args ja que eu uso da abreviação psvm
         System.out.println("===============");
         System.out.println("Seja bem vindo");
         System.out.println("Me diga o Valor do Produto");
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner vcanner = new Scanner(System.in);
         double calculoNovo = scanner.nextDouble();
 
         //denominei a variavel double (numeros decimais)
