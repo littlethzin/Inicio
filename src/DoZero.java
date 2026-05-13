@@ -37,9 +37,10 @@ public class DoZero {
         } else if (opEscolhida.equalsIgnoreCase("2")) {
             System.out.println("Voce escolheu a opçao 2");
             loginin loginon = new loginin();
-            loginon.loginlouco();
+            product product4 = new product()
+            System.exit(0);
+            //forma de chamar a classe dentro de outra classe
 
-            //ainda analisando e pensando em como posso melhorar essa parte
 
 
         } else {
@@ -126,10 +127,8 @@ public class DoZero {
 
             } else {
 
-                System.out.println("Obrigado por entrar em contato conosco, desejamos que voce consgiga comprar o que voce deseja"
-                );
                 compraRealizadaN nCompra = new compraRealizadaN();
-                System.out.println("tenha um bom dia");
+                System.out.println("Tenha um bom dia");
 
 
             }
@@ -146,12 +145,12 @@ public class DoZero {
 
     class compraRealizada {
         public compraRealizada() {
-            System.out.println("compra realizada");
+            System.out.println("Compra realizada");
         }
     }
 
 class compraRealizadaN {
     public compraRealizadaN() {
-        System.out.println("compra nao realizada");
+        System.out.println("Compra nao realizada");
     }
 }
